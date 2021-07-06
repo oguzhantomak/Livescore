@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livescore.UI", "Livescore.UI\Livescore.UI.csproj", "{645876EF-D2E3-464C-A960-28FCBE93F410}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{645876EF-D2E3-464C-A960-28FCBE93F410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645876EF-D2E3-464C-A960-28FCBE93F410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645876EF-D2E3-464C-A960-28FCBE93F410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645876EF-D2E3-464C-A960-28FCBE93F410}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D5AB277-E17A-4E8B-8280-EDB7DCBA79A1}
+	EndGlobalSection
+EndGlobal
