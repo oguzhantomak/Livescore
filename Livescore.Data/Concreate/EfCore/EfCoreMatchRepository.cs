@@ -102,7 +102,7 @@ namespace Livescore.Data.Concreate.EfCore
             return ControlMatchDetails(match);
         }
 
-        public async Task<List<Match>> TodaysMatches()
+        public async Task<List<Match>> AllMatches()
         {
             await using (var context = new LiveScoreContext())
             {

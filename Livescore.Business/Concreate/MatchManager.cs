@@ -23,9 +23,9 @@ namespace Livescore.Business.Concreate
             return await _matchRepository.ControlMatchDetails(match);
         }
 
-        public async Task<List<Match>> TodaysMatches()
+        public async Task<List<Match>> AllMatches()
         {
-            return await _matchRepository.TodaysMatches();
+            return await _matchRepository.AllMatches();
         }
     }
 }

@@ -11,6 +11,6 @@ namespace Livescore.Business.Abstract
     {
         Task<bool> ControlMatchDetails(Match match);
 
-        Task<List<Match>> TodaysMatches();
+        Task<List<Match>> AllMatches();
     }
 }
