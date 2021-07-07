@@ -1,6 +1,76 @@
-﻿@{
+﻿@model List<Livescore.Entity.Match>
+@{
     ViewData["Title"] = "Home Page";
 }
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Durum</th>
+            <th scope="col">Ev Sahibi</th>
+            <th scope="col">Rakip</th>
+            <th scope="col">İlk Yarı Skoru</th>
+            <th scope="col">İkinci Yarı Skoru</th>
+            <th scope="col">Canlı Skor</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Sistem Kontrol Zamanı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var match in Model)
+        {
+            @if (match.Date.ToShortDateString() == DateTime.Today.ToShortDateString())
+            {
+                @if (match.Status.Id == 5)
+                {
+                    <tr class="table-primary">
+                        <td>@match.Status.Name</td>
+                        <td>@match.HomeTeam.Name</td>
+                        <td>@match.AwayTeam.Name</td>
+                        <td>@match.HomeTeam.Score.HalfTime - @match.AwayTeam.Score.HalfTime</td>
+                        <td>@match.HomeTeam.Score.Regular - @match.AwayTeam.Score.Regular</td>
+                        <td>@match.HomeTeam.Score.Current - @match.AwayTeam.Score.Current</td>
+                        <td>@match.Date</td>
+                        <td>@match.SystemUpdateDate</td>
+                        <td>z</td>
+                    </tr>
+                }
+                else
+                {
+                    <tr class="table-warning">
+                        <td>@match.Status.Name</td>
+                        <td>@match.HomeTeam.Name</td>
+                        <td>@match.AwayTeam.Name</td>
+                        <td>@match.HomeTeam.Score.HalfTime - @match.AwayTeam.Score.HalfTime</td>
+                        <td>@match.HomeTeam.Score.Regular - @match.AwayTeam.Score.Regular</td>
+                        <td>@match.HomeTeam.Score.Current - @match.AwayTeam.Score.Current</td>
+                        <td>@match.Date</td>
+                        <td>@match.SystemUpdateDate</td>
+                        <td>z</td>
+                    </tr>
+                }
+
+            }
+            else if (match.Date < DateTime.Today)
+            {
+                <tr class="table-success">
+                    <td>@match.Status.Name</td>
+                    <td>@match.HomeTeam.Name</td>
+                    <td>@match.AwayTeam.Name</td>
+                    <td>@match.HomeTeam.Score.HalfTime - @match.AwayTeam.Score.HalfTime</td>
+                    <td>@match.HomeTeam.Score.Regular - @match.AwayTeam.Score.Regular</td>
+                    <td>@match.HomeTeam.Score.Current - @match.AwayTeam.Score.Current</td>
+                    <td>@match.Date</td>
+                    <td>@match.SystemUpdateDate</td>
+                    <td>z</td>
+                </tr>
+            }
+        }
+
+
+    </tbody>
+</table>
+
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>

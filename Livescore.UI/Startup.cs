@@ -7,6 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Livescore.Business.Abstract;
+using Livescore.Business.Concreate;
+using Livescore.Data.Abstract;
+using Livescore.Data.Concreate.EfCore;
 
 namespace Livescore.UI
 {
@@ -22,6 +26,8 @@ namespace Livescore.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IMatchRepository, EfCoreMatchRepository>();
+            services.AddScoped<IMatchService, MatchManager>();
             services.AddControllersWithViews();
         }
 
